@@ -1,0 +1,11 @@
+#include "mbed.h"
+// Sharp IR GP2Y0A41SK0F Distance Test// http://tinkcore.com/sharp-ir-gp2y0a41-skf/
+AnalogIn   ain(p15);DigitalOut led1(LED1);
+// main() runs in its own thread in the OSint main() {       
+while (true) {    
+if(ain > 0.2) {        
+led1 = 1;        
+} else {         
+led1 = 0;       
+}
+}
